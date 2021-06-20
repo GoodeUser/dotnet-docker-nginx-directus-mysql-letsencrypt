@@ -91,7 +91,7 @@ services:
       - certs:/etc/nginx/certs
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
-      - applic:ation
+      - application
     depends_on:
       - nginx-proxy
     profiles: ["production"] # only run the lets encrypt service in production
