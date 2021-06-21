@@ -30,6 +30,8 @@ services:
       DB_PASSWORD: "${MYSQL_PASSWORD}"
       ADMIN_EMAIL: ${DIRECTUS_EMAIL}
       ADMIN_PASSWORD: ${DIRECTUS_PASSWORD}
+      VIRTUAL_HOST: "${VIRTUAL_HOST}"
+      VIRTUAL_PORT: 8055
 
   app:
     build: ./web
