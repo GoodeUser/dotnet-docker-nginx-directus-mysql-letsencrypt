@@ -20,6 +20,6 @@ RUN dotnet publish "Web.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY ./../default.conf /etc/nginx/conf.d
+COPY default.conf /etc/nginx/conf.d
 # COPY nginx.conf /etc/nginx/conf.d/nginx.conf
 ENTRYPOINT ["dotnet", "Web.dll"]
